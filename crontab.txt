@@ -1,0 +1,9 @@
+# check if running every minute
+*/5 * * * * /home/ubuntu/apprtc/scripts/apprtc_check.sh
+*/7 * * * * /home/ubuntu/apprtc/scripts/websocket_check.sh
+*/6 * * * * /home/ubuntu/apprtc/scripts/turn_check.sh
+
+# restart every 12 hours
+5 */12 * * * /home/ubuntu/apprtc/scripts/apprtc_check.sh restart
+6 */12 * * * /home/ubuntu/apprtc/scripts/websocket_check.sh restart
+7 */12 * * * /home/ubuntu/apprtc/scripts/turn_check.sh restart
